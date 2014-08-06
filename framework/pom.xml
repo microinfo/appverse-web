@@ -196,15 +196,15 @@
 		<spring.version>4.0.6.RELEASE</spring.version>
         <spring.security.version>3.2.4.RELEASE</spring.security.version>
         <spring.oauth2.version>2.0.2.RELEASE</spring.oauth2.version>
-		<slf4j.version>1.5.11</slf4j.version>
+		<slf4j.version>1.7.5</slf4j.version>
 		<gwt.version>2.5.1</gwt.version>
 		<restygwt.version>1.4</restygwt.version>
 		<gin.version>1.5.0</gin.version>
 		<jsr311.version>2.0</jsr311.version>
-		<jersey.version>2.5</jersey.version>
+		<jersey.version>2.11</jersey.version>
         <jdk.source>1.6</jdk.source>
         <jdk.target>1.6</jdk.target>
-        <ehcache.version>2.4.5</ehcache.version>
+        <ehcache.version>2.4.7</ehcache.version>
         <owasp.esapi.version>2.1.0</owasp.esapi.version>
         <org.jsoup.version>1.7.3</org.jsoup.version>
         <nimbus.version>2.25</nimbus.version>
@@ -1010,13 +1010,13 @@
 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis</artifactId>
-				<version>3.1.1</version>
+				<version>3.2.7</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis-spring</artifactId>
-				<version>1.1.1</version>
+				<version>1.2.2</version>
 			</dependency>
 			<!-- END OF PERSISTENCE MANAGED DEPENDENCIES -->
 
@@ -1125,7 +1125,7 @@
 			<dependency>
 				<groupId>net.sf.ehcache</groupId>
 				<artifactId>ehcache-jmsreplication</artifactId>
-				<version>0.3</version>
+				<version>0.5</version>
 				<exclusions>
 					<exclusion>
 						<artifactId>ehcache</artifactId>
