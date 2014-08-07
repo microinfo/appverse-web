@@ -100,6 +100,11 @@ public class AppverseWebColumnHeaderAppearance implements ColumnHeaderAppearance
   }
 
   @Override
+  public int getColumnMenuWidth() {
+      return 0;
+  }
+
+    @Override
   public String columnsWrapSelector() {
     return "." + style.headerInner();
   }

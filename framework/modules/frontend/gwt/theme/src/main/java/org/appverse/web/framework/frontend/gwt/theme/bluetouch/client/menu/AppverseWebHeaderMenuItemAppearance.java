@@ -9,12 +9,17 @@ package org.appverse.web.framework.frontend.gwt.theme.bluetouch.client.menu;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.CssResource;
-import com.google.gwt.user.client.Element;
+import com.google.gwt.dom.client.Element;
 import com.sencha.gxt.widget.core.client.menu.HeaderMenuItem.HeaderMenuItemAppearance;
 
 public class AppverseWebHeaderMenuItemAppearance extends AppverseWebItemAppearance implements HeaderMenuItemAppearance {
 
-  public interface AppverseWebHeaderMenuItemResources extends AppverseWebItemResources {
+    @Override
+    public void applyItemStyle(com.google.gwt.dom.client.Element element) {
+        element.addClassName(headerStyle.menuText());
+    }
+
+    public interface AppverseWebHeaderMenuItemResources extends AppverseWebItemResources {
 
     @Source("AppverseWebHeaderMenuItem.css")
     AppverseWebHeaderMenuItemStyle headerStyle();
@@ -39,9 +44,6 @@ public class AppverseWebHeaderMenuItemAppearance extends AppverseWebItemAppearan
     headerStyle.ensureInjected();
   }
 
-  @Override
-  public void applyItemStyle(Element element) {
-    element.addClassName(headerStyle.menuText());
-  }
+
 
 }
