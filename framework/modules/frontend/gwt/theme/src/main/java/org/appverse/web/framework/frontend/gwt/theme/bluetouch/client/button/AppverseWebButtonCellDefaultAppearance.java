@@ -163,7 +163,7 @@ public class AppverseWebButtonCellDefaultAppearance<C> implements ButtonCellAppe
 
     StyleInjectorHelper.ensureInjected(this.style, true);
 
-    heightOffset = frame.getFrameSize(null).getHeight();
+    heightOffset = frame.getFrameSize().getHeight();
   }
 
   @Override
@@ -176,28 +176,27 @@ public class AppverseWebButtonCellDefaultAppearance<C> implements ButtonCellAppe
     return parent.getFirstChildElement().cast();
   }
 
-    @Override
-    public void onFocus(XElement xElement, boolean b) {
-        frame.onFocus(xElement,b);
-    }
+  @Override
+  public void onFocus(XElement parent, boolean focused, NativeEvent event) {
+    frame.onFocus(parent, focused, event);
+  }
 
-    @Override
-    public void onOver(XElement xElement, boolean b) {
-        frame.onOver(xElement, b);
-        xElement.setClassName(style.over(), b);
-    }
+  @Override
+  public void onOver(XElement parent, boolean over, NativeEvent event) {
+    frame.onOver(parent, over, (Event) event.cast());
+    parent.setClassName(style.over(), over);
+  }
 
-    @Override
-    public void onPress(XElement xElement, boolean b) {
-        frame.onPress(xElement, b);
-    }
-
+  @Override
+  public void onPress(XElement parent, boolean pressed, NativeEvent event) {
+    frame.onPress(parent, pressed, event);
+  }
 
   @Override
   public void onToggle(XElement parent, boolean pressed) {
     // we pass child of parent so toggle state is not lost when real press state
     // is modified
-    frame.onPress(parent.getFirstChildElement().<XElement> cast(), pressed);
+    frame.onPress(parent.getFirstChildElement().<XElement> cast(), pressed, null);
   }
 
   @Override

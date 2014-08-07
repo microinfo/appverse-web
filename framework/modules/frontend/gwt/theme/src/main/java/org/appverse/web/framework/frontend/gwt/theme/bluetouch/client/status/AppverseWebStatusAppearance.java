@@ -10,11 +10,11 @@ package org.appverse.web.framework.frontend.gwt.theme.bluetouch.client.status;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.ImageResource;
-import com.sencha.gxt.theme.base.client.status.StatusDefaultAppearance;
+import com.sencha.gxt.theme.base.client.status.StatusBaseAppearance;
 
-public class AppverseWebStatusAppearance extends StatusDefaultAppearance {
+public class AppverseWebStatusAppearance extends StatusBaseAppearance {
 
-  public interface AppverseWebStatusResources extends StatusDefaultAppearance.StatusResources, ClientBundle {
+  public interface AppverseWebStatusResources extends StatusBaseAppearance.StatusResources, ClientBundle {
 
     @Override
     @Source({"com/sencha/gxt/theme/base/client/status/Status.css", "AppverseWebStatus.css"})

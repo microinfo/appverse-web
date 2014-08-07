@@ -188,6 +188,11 @@ public class AppverseWebTriggerFieldAppearance extends ValueBaseFieldDefaultAppe
   }
 
   @Override
+  public void setTriggerVisible(XElement parent, boolean visible) {
+    getTrigger(parent).setVisible(visible);
+  }
+
+  @Override
   public boolean triggerIsOrHasChild(XElement parent, Element target) {
     return parent.isOrHasChild(target) && target.<XElement> cast().is("." + resources.css().trigger());
   }
