@@ -3,6 +3,7 @@ Appverse Web
 
 This is the main repository of the Appverse Web architecture for JSON Services, GWT and JSF2 server-side web applications. Appverse Web is a multi-frontend technology capable web application framework incorporating the best-of-breed open source stack to meet the challenges of secure and robust server-side service development, integration and delivery.
 
+
 ## More Information
 
 * **About this project**: <http://appverse.github.com/appverse-web>
