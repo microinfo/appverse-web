@@ -187,10 +187,10 @@ public class AppverseWebTriggerFieldAppearance extends ValueBaseFieldDefaultAppe
     getInputElement(parent).setClassName(style.noedit(), !editable);
   }
 
-  @Override
+/*  @Override
   public void setTriggerVisible(XElement parent, boolean visible) {
     getTrigger(parent).setVisible(visible);
-  }
+  }*/
 
   @Override
   public boolean triggerIsOrHasChild(XElement parent, Element target) {

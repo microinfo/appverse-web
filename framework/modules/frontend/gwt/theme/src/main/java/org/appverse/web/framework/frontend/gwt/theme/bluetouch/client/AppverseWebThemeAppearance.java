@@ -32,14 +32,28 @@ public class AppverseWebThemeAppearance implements ThemeAppearance {
     return style;
   }
 
-  public AppverseWebThemeAppearance() {
+    @Override
+    public String borderColor() {
+        return null;
+    }
+
+    @Override
+    public String borderColorLight() {
+        return null;
+    }
+
+    @Override
+    public String backgroundColorLight() {
+        return null;
+    }
+
+    public AppverseWebThemeAppearance() {
     this.bundle = GWT.create(Bundle.class);
     this.style = bundle.css();
 
     StyleInjectorHelper.ensureInjected(this.style, true);
   }
 
-  @Override
   public ImageResource moreIcon() {
     return bundle.more();
   }

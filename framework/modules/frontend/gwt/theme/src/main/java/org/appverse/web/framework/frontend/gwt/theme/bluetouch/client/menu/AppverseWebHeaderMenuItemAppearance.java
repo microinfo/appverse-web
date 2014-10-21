@@ -14,7 +14,8 @@ import com.sencha.gxt.widget.core.client.menu.HeaderMenuItem.HeaderMenuItemAppea
 
 public class AppverseWebHeaderMenuItemAppearance extends AppverseWebItemAppearance implements HeaderMenuItemAppearance {
 
-  public interface AppverseWebHeaderMenuItemResources extends AppverseWebItemResources {
+
+    public interface AppverseWebHeaderMenuItemResources extends AppverseWebItemResources {
 
     @Source("AppverseWebHeaderMenuItem.css")
     AppverseWebHeaderMenuItemStyle headerStyle();
@@ -39,9 +40,8 @@ public class AppverseWebHeaderMenuItemAppearance extends AppverseWebItemAppearan
     headerStyle.ensureInjected();
   }
 
-  @Override
-  public void applyItemStyle(Element element) {
-    element.addClassName(headerStyle.menuText());
-  }
-
+    @Override
+    public void applyItemStyle(com.google.gwt.dom.client.Element element) {
+        element.addClassName(headerStyle.menuText());
+    }
 }
